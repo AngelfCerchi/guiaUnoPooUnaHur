@@ -1,0 +1,38 @@
+import contador.*
+test "ultimo comando incremento" {
+	contador.valorActual(10)
+	contador.inc()
+	contador.inc()
+	contador.dec()
+	contador.inc()
+	assert.equals("incremento",contador.ultimoComando())
+
+}
+
+test "ultimo comando decremento" {
+	contador.valorActual(10)
+	contador.inc()
+	contador.inc()
+	contador.inc()
+	contador.dec()
+	assert.equals("decremento",contador.ultimoComando())
+
+}
+test "ultimo comando actualizacion" {
+	contador.valorActual(10)
+	contador.inc()
+	contador.inc()
+	contador.inc()
+	contador.valorActual(10)
+	assert.equals("actualizacion",contador.ultimoComando())
+
+}
+test "ultimo comando reset" {
+	contador.valorActual(10)
+	contador.inc()
+	contador.inc()
+	contador.inc()
+	contador.reset()
+	assert.equals("reset",contador.ultimoComando())
+
+}
