@@ -1,0 +1,10 @@
+import calculadora.*
+test "carga = 0,carga+4, carga*5,carga-8,carga*2 == 24" {
+	calculadora.cargar(0)
+	calculadora.sumar(4)
+	calculadora.multiplicar(5)
+	calculadora.restar(8)
+	calculadora.multiplicar(2)
+	assert.equals(24,calculadora.valorActual())
+
+}
