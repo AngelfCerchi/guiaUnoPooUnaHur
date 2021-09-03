@@ -1,0 +1,11 @@
+import contador.*
+test "El resultado de la primera etapa debe dar 12" {
+	contador.valorActual(10)
+	contador.inc()
+	contador.inc()
+	contador.dec()
+	contador.inc()
+	
+	assert.equals(12,contador.valorActual())
+
+}
